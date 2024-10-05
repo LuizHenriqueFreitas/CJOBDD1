@@ -1,0 +1,71 @@
+CALCULO RELACIONAL - Luiz Henrique - BDD1
+
+-> Firme lógica matemática.
+-> É uma referencia para expressividade de linguagens de consulta, como SQL.
+
+-> As consultas são representadas por expressões que podem conter operadores 
+lógicos, relacionais e quantitativos além de variáveis e constantes.
+
+Calculo relacional NÃO tem ordem de operações, ao contrário de Algebra relacional,
+são Declarativo(não procedimental) e Procedimental, respectivamente, e podem ser
+igualmente expressivos.
+
+A mioria das linguagens de consulta é completa relacionada ao Calculo relacional, e
+também tendem a ser mais expressivas que o Calculo ou a Algebra relacional (devido
+as operações adicionais que são frequentemente necessárias).
+
+--- CALCULO RELACIONAL DE TUPLA ---
+
+> baseado nas especificações de variáveis de tupla.
+> normalmente variam ao longo de uma relação específica do BD.
+> logo, o valor da variável pode ser qualquer tupla individual da relação.
+
+-- Estrutura de uma consulta --
+
+{t| COND(t)}
+
+\> onde 't' é a variavel de tupla e 'COND (t)' é uma expressão condicional 
+que envolve 't';
+\> o reultado da consulta é o conjunto de todos os 't' que correspondem a 'COND(t)';
+
+--> Quantificadores: Universal(∀); Existencial(∃).
+-> Uma variável é considerada LIGADA quando ela aparece na cláusula (∀t) ou (∃t);
+caso contrário ela é LIVRE. 
+
+-> (∀t)(f) é verdadeiro se a fórmula 'f' é avaliada como verdadeira se PARA CADA 
+tupla (no universo) atribuída às ocorrências livres de 't' em 'f'.
+	\> todos os itens 't'(tuplas) devem corresponder para que seja verdadeiro.
+
+-> Já (∃t)(f) é verdadeiro se a fórmula 'f' é avaliada como verdadeira se para
+PELO MENOS UMA tupla atribuída às ocorrências livre de 't' em 'f'. 
+	\> 1(ou mais) item 't'(tupla) deve corresponder oara que seja verdadeiro.
+
+
+--- CALCULO RELACIONAL DE DOMÍNIO ---
+
+- outra variação de cálculo relacional;
+- tão expressiovo quanto cálculo de tupla ou álgebra relacional.
+- este calculo foi pensado como maneira de explicar o funcionamento da QBE;
+Query By Exemple (QBE) é uma linguagem, desenvolvida quase simultaneamente ao SQL,
+onde inicialmente é apresentado um esquema relacional em branco, qual o usuário
+preenche a consulta como um exemplo.
+
+- ao invés de variáveis com intervalos representando tupls de relações, variáveis têm 
+intervalos representados por valores únicos de domínio dos atributos.
+
+
+-- Extrutura de uma expressão --
+{x1, x2 ..., xn |
+	COND(x1, x2, ..., xn, xn+1, xn+2, ..., xn+m)}
+
+> onde 'x1, x2, ..., xn, xn+1, xn+2, ..., xn+m' são vairáveis de domínio que variam
+sobre domínios (de atributos);
+> COND é uma condição ou formula de cálculo relacional de Domínio.
+
+--- Conclusões finais sobre CALCULO RELACIONAL ---
+
+> Exitem muitos sinais específicos como os, já citados, operadores quantitativos; 
+Alem de outros, como ^(e), v(ou) e ¬(não), que são operadores lógicos;
+Calculo relacional é muito interessante e seu entendimento é fundamental para 
+entender também as linguagens que nele se basiam, como no caso do SQL ou QBE, que
+foram citados nesta pesquisa.
